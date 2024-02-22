@@ -1,10 +1,14 @@
 import Test from "./components/Test";
+import Login from "./components/forms/Login";
+import Signup from "./components/forms/Signup";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <div>
         <Test />
+        <Login />
+        <Signup />
       </div>
     </main>
   );
