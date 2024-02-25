@@ -1,3 +1,16 @@
 .neon-text {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 70px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.8), 0 0 100px rgba(0, 255, 255, 0.8), 0 0 150px rgba(0, 255, 255, 0.8);
 }
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate-animation {
+    animation: rotate 10s linear infinite; 
+  }

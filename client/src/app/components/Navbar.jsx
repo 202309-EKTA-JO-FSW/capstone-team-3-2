@@ -1,10 +1,11 @@
+
 import React , {useState} from "react";
 import Link from "next/link";
 
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery, setSearchQuery] = useState("");
 
     const toggleNavbar = () => {
       setIsOpen(!isOpen);
@@ -18,7 +19,7 @@ const Navbar = () => {
         e.preventDefault();
 
         window.location.href = `/search?query=${encodeURIComponent(searchQuery)}`;
-        console.log('Searching:', searchQuery);
+        console.log("lubna", searchQuery);
       };
 
 
@@ -93,4 +94,4 @@ const Navbar = () => {
 };
 
     export default Navbar;
-    
+   
