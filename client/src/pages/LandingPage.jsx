@@ -12,7 +12,7 @@ const LandingPage = () => {
     e.preventDefault();
     
     window.location.href = `/delivery?query=${encodeURIComponent(deliveryAddress)}`;
-    console.log("lubna", deliveryAddress);
+    console.log("searching", deliveryAddress);
   }
 
     return (
@@ -33,6 +33,7 @@ const LandingPage = () => {
 
           
           <div className="bg-gray-200 py-16 ">
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full items-center">
           <div className="text-center">
             
@@ -99,7 +100,7 @@ const LandingPage = () => {
   <h3 className="text-xl font-bold text-black mb-2">Join Our Team</h3>
   <p className="text-gray-700 mb-14">Be part of a team that's building an exceptional delivery service</p>
   <form>
-  <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Start Riding</button>
+  <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">join Our Team</button>
           </form>
 </div>
         </div>
