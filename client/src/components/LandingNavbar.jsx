@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { Button } from "@/components/ui/button"
+import { LoginButton, SignupButton } from "@/components/auth/login-button";
 
 
 
@@ -14,23 +16,20 @@ const LandingNavbar = () => {
             </div>
           </div>
           <div className="flex">
-            <Link href="/login">
-              <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
-                Login
-              </span>
-            </Link>
-            <Link href="/signup">
-              <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
-                Signup
-              </span>
-            </Link>
+            <LoginButton >
+              <Button variant='ghost' size='sm'>Sign in</Button>
+            </LoginButton>
+            <SignupButton >
+              <Button variant='ghost' size='sm'>Sign up</Button>
+            </SignupButton>
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </nav>
-    
+
   );
 };
 
