@@ -27,6 +27,6 @@ app.get("/test", (req, res) => {
   );
 });
 
-app.use('/api', userRoutes)
+app.use('/api/users', userRoutes)
 
 module.exports = app;
