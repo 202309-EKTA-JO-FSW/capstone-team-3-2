@@ -28,20 +28,7 @@ const userSchema = new mongoose.Schema({
         default: Date.now
     }
 });
-userSchema.pre('save', async function (next) {
-    const user = this;
-    if (!user.isModified('password')) {
-        return next();
-    }
-    try {
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
-        user.password = hashedPassword;
-        next();
-    } catch (error) {
-        return next(error);
-    }
-});
+
 
 userSchema.virtual('fullName').get(function () {
     return `${this.firstName} ${this.lastName}`;
