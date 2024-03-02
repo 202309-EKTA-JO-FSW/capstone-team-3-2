@@ -5,7 +5,7 @@ const Hello = () => {
   const [testResult, setTestResult] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/test")
+    fetch("http://localhost:3000")
       .then((res) => res.json())
       .then((data) => {
         setTestResult(data);
