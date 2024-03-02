@@ -20,7 +20,7 @@ const LandingPage = () => {
 
             <div className=" flex flex-col relative">
             <div className="flex justify-start items-center w-full">
-          <h1 className="text-4xl font-bold text-black mb-8">Discover Our Most Delectable Dishes</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Discover Our Most Delectable Dishes</h1>
             <div className="photosContainer ml-auto">
               <img src="https://barn2.com/wp-content/uploads/2020/09/834671_restaurant-chain-order-online_Op2_092120-cropped-1-820x358.png" alt="Food 1" className="slideIn-photo" />
               <div className="rotating-photos-container absolute top-0 left-0">
@@ -100,7 +100,7 @@ const LandingPage = () => {
   <h3 className="text-xl font-bold text-black mb-2">Join Our Team</h3>
   <p className="text-gray-700 mb-14">Be part of a team that's building an exceptional delivery service</p>
   <form>
-  <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">join Our Team</button>
+  <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Join Our Team</button>
           </form>
 </div>
         </div>
@@ -110,21 +110,36 @@ const LandingPage = () => {
 
        </div>
 
-       <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center w-full border border-yellow-500 shadow-lg">
+       <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center border border-yellow-500 shadow-lg">
   <h3 className="text-xl font-bold text-black mb-2">Download Our App</h3>
   
-  <form className="w-full">
+  <div className="flex flex-col md:flex-row items-center justify-between w-full">
+    <div className="bg-white p-8 rounded-lg shadow-md mb-4 md:mb-0">
+      <h3 className="text-xl font-bold text-black mb-2">Order With Ease</h3>
+      <p className="text-gray-700 mb-4">Indulge in the most delicious bites delivered to your door with FoodieHub. Our speedy delivery service offers a variety of cuisines from local restaurants.</p>
+      <form className="w-full">
     <button
       type="download"
-      className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
-    >Download</button>
+      className=" w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+    >
+      Download
+    </button>
   </form>
+    </div>
+
+    <div>
+    <img src="https://assets.api.uizard.io/api/cdn/stream/07d4696b-4d8a-41d4-b1d8-d76970325da7.png" alt="partner with us" className="w-70 h-32 object-cover rounded-full md:ml-8" />
+    </div>
+    
+  </div>
+  
+
 </div>
 
 
        </div>
        </div>
-       
+      
         
       );
     };
