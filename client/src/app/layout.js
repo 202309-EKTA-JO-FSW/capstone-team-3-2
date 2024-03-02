@@ -4,6 +4,7 @@ import "./globals.css";
 import React from 'react';
 import Navbar from '../app/components/Navbar';
 import LandingNavbar from "./components/LandingNavbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{color:"red"}} className ={inter.className}>
       <LandingNavbar/>
-
+<Footer/>
         {children}</body>
 
     </html>
