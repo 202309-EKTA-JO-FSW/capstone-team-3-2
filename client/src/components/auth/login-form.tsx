@@ -1,11 +1,10 @@
 'use client'
-
-import * as z from 'zod'
-import { useState, useTransition } from 'react'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { LoginSchema } from '@/schemas'
-import { CardWrapper } from "./card-wrapper"
+import * as z from 'zod';
+import { useState } from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { LoginSchema } from '@/schemas';
+import { CardWrapper } from "./card-wrapper";
 import {
     Form,
     FormControl,
@@ -13,17 +12,19 @@ import {
     FormItem,
     FormLabel,
     FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { FormError } from '@/components/form-error'
-import { FormSuccess } from '@/components/form-success'
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { FormError } from '@/components/form-error';
+import { FormSuccess } from '@/components/form-success';
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 export const LoginForm = ({ mainHeader }) => {
-    const [error, setError] = useState('')
-    const [success, setSuccess] = useState('')
-    const [isPending, startTransition] = useTransition()
+    const router = useRouter();
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const [isPending, setIsPending] = useState(false);
 
     const form = useForm<z.infer<typeof LoginSchema>>({
         resolver: zodResolver(LoginSchema),
@@ -31,104 +32,90 @@ export const LoginForm = ({ mainHeader }) => {
             email: "",
             password: ""
         }
+    });
 
-    })
+    const onSubmit = async (values: z.infer<typeof LoginSchema>) => {
+        setSuccess('');
+        setError('');
+        setIsPending(true);
 
-    const onSubmit = (values: z.infer<typeof LoginSchema>) => {
-        setSuccess('')
-        setError('')
-
-        startTransition(async () => {
-            try {
-                const response = await axios.post('http://localhost:3001/api/users/login/', {
-                    email: values.email,
-                    password: values.password,
-                });
-                setSuccess(response.data.message)
-                console.log(response.data.message);
-            } catch (error) {
-                console.error('Error:', error.response.data.message);
-                setError(error.response.data.message)
-
-            }
-        })
-    }
-
+        try {
+            const response = await axios.post('http://localhost:3001/api/users/login/', {
+                email: values.email,
+                password: values.password,
+            });
+            setSuccess(response.data.message);
+            localStorage.setItem('token', response.data.token);
+            router.push('/pages/test');
+        } catch (error) {
+            setError(error.response.data.message);
+        } finally {
+            setIsPending(false);
+        }
+    };
 
     return (
-        <div>
-            <CardWrapper
-                mainHeader={mainHeader}
-                headerLabel="Welcome back"
-                backButtonLabel="Don't have account? YET"
-                backButtonHref="/auth/register"
-                showSocial
-            >
-                <Form {...form}>
-                    <form
-                        onSubmit={form.handleSubmit(onSubmit)}
-                        className='space-y-6'
+        <CardWrapper
+            mainHeader={mainHeader}
+            headerLabel="Welcome back"
+            backButtonLabel="Don't have account? YET"
+            backButtonHref="/auth/register"
+            showSocial
+        >
+            <Form {...form}>
+                <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className='space-y-6'
+                >
+                    <div className='space-y-6'>
+                        <FormField
+                            control={form.control}
+                            name='email'
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Email</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            {...field}
+                                            disabled={isPending}
+                                            placeholder='john.doe@example.com'
+                                            type='email'
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name='password'
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Password</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            {...field}
+                                            disabled={isPending}
+                                            placeholder='******'
+                                            type='password'
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    </div>
+                    <FormError message={error} />
+                    <FormSuccess message={success} />
+                    <Button
+                        disabled={isPending}
+                        type='submit'
+                        className='w-full'
                     >
-                        <div className='space-y-6'>
-                            <FormField
-                                control={form.control}
-                                name='email'
-                                render={({ field }) => {
-                                    return (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Email
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    {...field}
-                                                    disabled={isPending}
-                                                    placeholder='john.doe@example.com'
-                                                    type='email'
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )
-                                }}
-                            />
-                            <FormField
-                                control={form.control}
-                                name='password'
-                                render={({ field }) => {
-                                    return (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Password
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    {...field}
-                                                    disabled={isPending}
-                                                    placeholder='******'
-                                                    type='password'
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )
-                                }}
-                            />
-                        </div>
-                        <FormError message={error} />
-                        <FormSuccess message={success} />
-                        <Button
-                            disabled={isPending}
-                            type='submit'
-                            className='w-full'>
-                            Login
-                        </Button>
-                    </form>
-                </Form>
-
-            </CardWrapper>
-        </div>
-
-    )
-
-}
+                        {isPending ? 'Logging in...' : 'Login'}
+                    </Button>
+                </form>
+            </Form>
+        </CardWrapper>
+    );
+};

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import withAuth from '@/components/withAuth';
 
 const dishesData = [
   {
@@ -124,7 +125,7 @@ const Products = () => {
         <button style={{ backgroundColor: 'black', color: 'white', borderRadius: '10px', padding: '5px 10px', fontSize: '0.8em' }} onClick={() => filterDishesByCategory('Drinks')}>Drinks</button>
       </div>
 
-  
+
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {filteredDishes.map((dish, index) => (
           <div key={index} style={{ margin: '10px', textAlign: 'left' }}>
@@ -146,4 +147,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default withAuth(Products);
