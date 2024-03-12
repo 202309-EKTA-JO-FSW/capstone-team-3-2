@@ -6,6 +6,7 @@ import React from 'react';
 import Navbar from '../app/components/Navbar';
 import LandingNavbar from "./components/LandingNavbar";
 import '../style.css';
+import SpecificPage from './components/specificRestaurant/Specific';
 
 export default function Home() {
   
@@ -18,6 +19,8 @@ export default function Home() {
         <Signup />
         <LandingNavbar/>
         <Navbar /> 
+        <SpecificPage />
+        
       </div>
     </main>
   );
