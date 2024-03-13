@@ -8,9 +8,11 @@ const {
 const pagination = require("../utils/pagination");
 
 const restaurantController = {
+  // Retrieve restaurants based on applied filters
   getFilteredRestaurants: async (req, res) => {
     const queries = req.query;
-    // create filter object based on passed url parameters
+
+    // Create filter object based on passed URL parameters
     let locationArray;
     let filters = {};
     if (queries.name) filters.name = { $regex: queries.name, $options: "i" };
@@ -23,42 +25,51 @@ const restaurantController = {
       };
     }
 
-    // If no filter is applied, all restaurants will be shown because filter object will be empty
     try {
+      // Retrieve restaurants based on applied filters
       let restaurants = await Restaurant.find(filters);
 
+      // Apply circular area filter if location is specified
       if (queries.loc)
         restaurants = getNearbyRestaurantsCircleArea(
           locationArray,
           restaurants,
         );
 
-      // pagination based on page and limit queries
+      // Paginate the results based on page and limit queries
       let list = {};
       if (restaurants.length) list = pagination(queries, restaurants);
-      // throw an error in case page query out of bounds
+      // Throw an error in case page query is out of bounds
       if (list instanceof Error) throw new Error(`${list.message}`);
 
       res.status(200).json(list);
     } catch (error) {
-      console.log(error);
+      console.error(error);
       res.status(500).json({ message: error.message });
     }
   },
+
+  // Retrieve a single restaurant along with its menu and reviews
   getOneRestaurantWithMenuAndReviews: async (req, res) => {
     const { id } = req.params;
 
     try {
+      // Retrieve the restaurant by ID
       const restaurant = await Restaurant.findById(id);
-      // if restaurant doesn't exist, exit with response
+
+      // If restaurant doesn't exist, return an error response
       if (!restaurant)
         return res.status(404).json({
           message: "Restaurant does not exist, check the provided ID",
         });
+
+      // Retrieve items and reviews associated with the restaurant
       const items = await Item.find({ restaurantID: id });
       const restaurantReviews = await Review.find({ restaurantId: id }).limit(
         50,
       );
+
+      // Return restaurant details, menu items, and reviews
       return res.status(200).json({ restaurant, items, restaurantReviews });
     } catch (error) {
       return res.status(500).json(error);
