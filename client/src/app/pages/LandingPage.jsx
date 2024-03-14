@@ -23,8 +23,7 @@ const LandingPage = () => {
           <div className="photosContainer ml-auto">
             <img src="https://barn2.com/wp-content/uploads/2020/09/834671_restaurant-chain-order-online_Op2_092120-cropped-1-820x358.png" alt="Food 1" className="slideIn-photo" />
             <div className="rotating-photos-container absolute top-0 left-0">
-              <img src="https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg" alt="Food 2" className="rotating-photo w-4 h-4 object-cover rotate-animation" />
-              <img src="https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg" alt="Food 3" className="rotating-photo w-4 h-4 object-cover rotate-animation" />
+              
             </div>
           </div>
         </div>
@@ -109,32 +108,21 @@ const LandingPage = () => {
 
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center border border-yellow-500 shadow-lg">
-  <h3 className="text-xl font-bold text-black mb-2">Download Our App</h3>
-  
-  <div className="flex flex-col md:flex-row items-center justify-between w-full">
-    <div className="bg-white p-8 rounded-lg shadow-md mb-4 md:mb-0">
-      <h3 className="text-xl font-bold text-black mb-2">Order With Ease</h3>
-      <p className="text-gray-700 mb-4">Indulge in the most delicious bites delivered to your door with FoodieHub. Our speedy delivery service offers a variety of cuisines from local restaurants.</p>
-      <form className="w-full">
-    <button
-      type="download"
-      className=" w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
-    >
-      Download
-    </button>
-  </form>
-    </div>
+        <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center w-full border border-yellow-500 shadow-lg">
+          <h3 className="text-xl font-bold text-black mb-2">Download Our App</h3>
 
-    <div>
-    <img src="https://assets.api.uizard.io/api/cdn/stream/07d4696b-4d8a-41d4-b1d8-d76970325da7.png" alt="partner with us" className="w-70 h-32 object-cover rounded-full md:ml-8" />
-    </div>
-    
-  </div>
+          <form className="w-full">
+            <button
+              type="download"
+              className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+            >Download</button>
+          </form>
+        </div>
+
 
       </div>
     </div>
-</div>
+
 
   );
 };
