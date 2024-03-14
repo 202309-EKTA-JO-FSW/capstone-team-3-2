@@ -6,7 +6,6 @@ import { LoginButton } from "@/components/auth/login-button";
 import LandingNavbar from '@/components/LandingNavbar'
 import Navbar from '@/components/Navbar'
 import LandingPage from '@/app/pages/LandingPage'
-
 import '../style.css';
 
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const LandingPage = () => {
 
   const [deliveryAddress, setDeliveryAddress] = useState("");
