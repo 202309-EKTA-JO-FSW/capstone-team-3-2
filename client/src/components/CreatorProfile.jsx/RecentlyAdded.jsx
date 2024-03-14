@@ -30,11 +30,3 @@ export default RecentlyAdded;
 
 
 
-/*const Text = (props) => {
-  return (
-    <div style={styles.Text}>
-      {props.text ?? defaultProps.text}
-    </div>
-  );
-};
-*/
