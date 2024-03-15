@@ -17,33 +17,37 @@ const LandingPage = () => {
   
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative">
+<div className="flex flex-col items-center justify-center relative">
 
-      <div className=" flex flex-col relative">
-        <div className="flex justify-start items-center w-full">
-          <div >
-<img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png" alt="discover1" className="relative top-16 left-36 w-10 h-10 rounded-lg bg-center bg-cover bg-no-repeat "/>
-          </div>
-          <div> <h1 className="text-6xl font-semibold font-poppins text-center text-black mb-8">Discover Our Most Delectable Dishes</h1>
-          </div>
-          <div >
-<img src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png" alt="discover2"  className="absolute top-446 left-1111 w-10 h-10 rounded-lg"/>
-          </div>
-        </div>
-        <form onSubmit={handleSearchSubmit} className=" flex items-center ml-auto">
-              <input
-                type="text"
-                value={deliveryAddress}
-                onChange={handleSearchAddress}
-                className="border border-gray-300 rounded-md px-4 py-2 mr-4 focus:outline-none focus:border-indigo-500 text-black text-center"
-
-                placeholder="Enter your address"
-              />
-              <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Search</button>
-            </form>
-      </div>
+<div className="flex justify-center items-center w-full mb-8 relative">
+  
+  <div className="absolute top-0 left-0">
+    <img src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png" alt="discover2" className="w-12 h-12 rounded-lg" />
+  </div>
 
 
-      <div className="bg-gray-200 py-16 ">
+  <div className="">
+  <h1 className="text-6xl font-bold font-poppins text-center text-black mb-4">Discover Our Most Delectable Dishes</h1>
+  <form onSubmit={handleSearchSubmit} className="flex items-center">
+    <input
+      type="text"
+      value={deliveryAddress}
+      onChange={handleSearchAddress}
+      className="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-indigo-500 text-black text-center"
+      placeholder="Enter your address"
+    />
+    <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Search</button>
+  </form>
+  </div>
+
+
+  <div>
+    <img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png" alt="discover1" className="w-12 h-12 rounded-lg absolute right-0 bottom-0" />
+  </div>
+</div>
+
+
+<div className="bg-gray-200 py-16 ">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between w-full items-center">
           <div className="text-center">
@@ -76,61 +80,17 @@ const LandingPage = () => {
 
 </div>
 
-        <div className=" py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-black mb-8">Join The DishDash Community</h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center border border-yellow-500 shadow-lg">
-                  <img src="https://assets.api.uizard.io/api/cdn/stream/e246370c-8563-4926-bbe9-d1d44b872ab7.png" alt="become a rider" className="w-24 h-24 object-cover rounded-full" />
-                  <h3 className="text-xl font-bold text-black mb-2">Become A Rider</h3>
-                  <p className="text-gray-700 mb-4">Earn money by delivering food from restaurants. All you need is a bike and a passion for great service</p>
-                  <form >
-                    <link></link>
-                    <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Start Riding</button>
-                  </form>
-                </div>
-                <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center border border-yellow-500 shadow-lg">
-                  <img src="https://assets.api.uizard.io/api/cdn/stream/3de66382-a1d7-41e9-add0-73355e305e95.png" alt="partner with us" className="w-24 h-24 object-cover rounded-full mb-4" />
-                  <h3 className="text-xl font-bold text-black mb-2">Partner with Us</h3>
-                  <p className="text-gray-700 mb-4">DishDash helps restaurants thrive with online ordering, loyalty programs, and more</p>
-                  <form className="mt-auto">
-                    <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Join Now</button>
-                  </form>
-                </div>
-                <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center border border-yellow-500 shadow-lg">
-                  <img src="https://assets.api.uizard.io/api/cdn/stream/5731af9d-856a-4f19-be88-ace58e953529.png" alt="join our team" className="w-24 h-24 object-cover rounded-full" />
-                  <h3 className="text-xl font-bold text-black mb-2">Join Our Team</h3>
-                  <p className="text-gray-700 mb-14">Be part of a team that's building an exceptional delivery service</p>
-                  <form>
-                    <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">join Our Team</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+  
+</div>
 
 
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center w-full border border-yellow-500 shadow-lg">
-          <h3 className="text-xl font-bold text-black mb-2">Download Our App</h3>
-
-          <form className="w-full">
-            <button
-              type="download"
-              className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
-            >Download</button>
-          </form>
-        </div>
+      
 
 
       </div>
     
-
-
- </div>
+</div>
   )}
+  
 export default LandingPage;
 
