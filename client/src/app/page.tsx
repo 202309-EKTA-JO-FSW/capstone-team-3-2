@@ -15,13 +15,10 @@ const font = Poppins({
 })
 export default function Home() {
   return (
-    <main className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+    <main className=" bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
 
       <div className="bg-white " >
-
-
         <LandingNavbar />
-        
         <LandingPage />
         <Footer/>
       </div>
