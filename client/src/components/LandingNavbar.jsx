@@ -11,8 +11,12 @@ const LandingNavbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
+            <div>
+            <img class="h-8 w-auto" src="" alt="DishDash Logo"/>
+
+            </div>
             <div className="flex-shrink-0">
-              <span className="font-bold font-poppins text-white mr-4 neon-text text-2xl leading-14">DishDash</span>
+              <span className="font-semibold font-poppins text-white mr-4 neon-text text-2xl leading-14">DishDash</span>
             </div>
           </div>
           <div className="flex">

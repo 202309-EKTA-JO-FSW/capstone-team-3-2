@@ -20,29 +20,31 @@ const LandingPage = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative bg-gray-200 py-16 ">
-      <div className="flex flex-col items-center justify-center relative">
-        
-        <div className="flex justify-center items-center w-full mb-8 relative">
-          <div className="absolute top-0 left-0">
-            <img src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png" alt="discover2" className="w-10 h-10 rounded-lg" />
-          </div>
-          <div className="">
-            <header className="text-6xl font-semibold font-poppins text-center text-black mb-4">Discover Our Most Delectable Dishes</header>
-            <form onSubmit={handleSearchSubmit} className="flex items-center">
+
+<div className="flex  items-center justify-center relative">
+  <div  >
+    <img src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png" alt="discover2" className="w-10 h-10 rounded-lg absolute top-0 left-0" />
+  </div>
+
+          <div className="text-center">
+            <h1 className="text-6xl font-semibold font-poppins text-black mb-4">Discover Our Most <br/> Delectable Dishes</h1>
+            <form onSubmit={handleSearchSubmit} className="flex items-center justify-center">
               <input
                 type="text"
                 value={deliveryAddress}
                 onChange={handleSearchAddress}
-                className="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-indigo-500 text-black text-center"
+                className="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-indigo-500 text-black text-center mr-2"
                 placeholder="Enter your address"
               />
-              <button type="submit" className="bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">Search</button>
+              <button type="submit" className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">
+                Search
+              </button>
             </form>
           </div>
- <div>
-            <img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png" alt="discover1" className="w-12 h-12 rounded-lg absolute right-0 bottom-0" />
-          </div>
+          <div>
+          <img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png" alt="discover1" className="w-10 h-10 rounded-lg absolute bottom-0 right-0" />
         </div>
+      </div>
         
 
         <div className="bg-gray-200 py-16   mb-8 relative">
@@ -128,9 +130,6 @@ const LandingPage = () => {
   </div>
 </div>
 
-
-    
-
 <div className="bg-white p-8 rounded-lg shadow-md flex flex-row items-center w-full border border-yellow-500 shadow-lg">
   <div className="flex-1 flex flex-col justify-center"> 
     <div className="mb-4"> 
@@ -145,12 +144,11 @@ const LandingPage = () => {
         <p>Indulge in the most delicious bites delivered to your door with FoodieHub. Our speedy delivery service offers a variety of cuisines from local restaurants</p>
         <form className="w-full">
           <div>
+            <a href="https://play.google.com/store/apps/details?id=com.restaurant.mob&hl=en_US&pli=1"  rel="noopener noreferrer">
             <button
-              type="download"
-              className=" bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600" style={{ backgroundColor: 'black' }}
-            >
-              Download
+              type="download" className=" bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600" style={{ backgroundColor: 'black' }}>Download
             </button>
+            </a>
           </div>
         </form>
       </div>
@@ -158,9 +156,9 @@ const LandingPage = () => {
   </div>
 </div>
 
-        </div> 
+       </div>
 
-        </div>
+        
        
  
   )};
