@@ -94,33 +94,33 @@ const LandingPage = () => {
     <div className="flex flex-cols-3 gap-8">
     <div className="mr-4 bg-white p-8 rounded-lg shadow-md flex flex-col items-start border border-yellow-500 shadow-lg">
   <img src="https://assets.api.uizard.io/api/cdn/stream/e246370c-8563-4926-bbe9-d1d44b872ab7.png" alt="become a rider" className="w-10 h-12 object-cover rounded-full mb-4" />
-  <div>
+  <div className="pb-4" style={{ marginBottom: '10px' }}>
     <h3 className="text-xl font-semibold text-black mb-2">Become A Rider</h3>
-    <p className="text-gray-700 mb-4">Earn money by delivering food from restaurants. All you need is a bike and a passion for great service</p>
+    <p className="text-gray-700 mb-4" style={{ marginBottom: '10px' }}>Earn money by delivering food from restaurants. All you need is a bike and a passion for great service</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfozeHDuj3aPCKtKCIZbD9JdO4h6eQMXKJcS0GdTrugABOwTg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
-      <button type="button" className="font-semibold border border-black bg-black text-black px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">Start Riding</button>
+      <button type="button" className="font-semibold border border-black bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900 " style={{ backgroundColor: 'black' }}>Start Riding</button>
     </a>
   </div>
 </div>
 
 <div className="mr-4 bg-white p-8 rounded-lg shadow-md flex flex-col items-start border border-yellow-500 shadow-lg">
   <img src="https://assets.api.uizard.io/api/cdn/stream/3de66382-a1d7-41e9-add0-73355e305e95.png" alt="partner with us" className="w-10 h-14 object-cover rounded-full mb-4" />
-  <div>
+  <div className="pb-4" style={{ marginBottom: '10px' }}>
     <h3 className="text-xl font-semibold text-black mb-2">Partner with Us</h3>
-    <p className="text-gray-700 mb-4">DishDash helps restaurants thrive with online ordering, loyalty programs, and more</p>
+    <p className="text-gray-700 mb-4" >DishDash helps restaurants thrive with online ordering, loyalty programs, and more</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwVPLMm-BxGPulP1lEoipVLSAgihCjQ4TrC2gt8QVNt25OMA/viewform" target="_blank" rel="noopener noreferrer">
-      <button type="button" className="font-semibold border border-black bg-black text-black px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">Join Now</button>
+    <button type="button" className="font-semibold border border-black bg-black text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900" style={{ backgroundColor: 'black' }}>Join Now</button>
     </a>
   </div>
 </div>
 
 <div className=" mr-4 bg-white p-8 rounded-lg shadow-md flex flex-col items-start border border-yellow-500 shadow-lg">
   <img src="https://assets.api.uizard.io/api/cdn/stream/5731af9d-856a-4f19-be88-ace58e953529.png" alt="join our team" className="w-12 h-12 object-cover rounded-full mb-4" />
-  <div>
+  <div className="pb-4 items-center" style={{ marginBottom: '10px' }}>
     <h3 className="text-xl font-semibold text-black mb-2">Join Our Team</h3>
-    <p className="text-gray-700 mb-4 ">Be part of a team that's building an exceptional delivery service</p>
+    <p className="text-gray-700 mb-4"  >Be part of a team that's building an exceptional delivery service</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwVPLMm-BxGPulP1lEoipVLSAgihCjQ4TrC2gt8QVNt25OMA/viewform" target="_blank" rel="noopener noreferrer">
-      <button type="button" className="font-semibold border border-black bg-black text-black px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900">Work With Us</button>
+    <button type="button" className="font-semibold border border-black text-white px-4 py-2 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-900" style={{ backgroundColor: 'black' }}>Work With Us</button>
     </a>
   </div>
 </div>
@@ -132,8 +132,10 @@ const LandingPage = () => {
     
 
 <div className="bg-white p-8 rounded-lg shadow-md flex flex-row items-center w-full border border-yellow-500 shadow-lg">
-  <div className="flex-1">
-    <h1 className="text-xl font-semibold text-black mb-2 mr-4">Download Our App</h1>
+  <div className="flex-1 flex flex-col justify-center"> 
+    <div className="mb-4"> 
+      <h1 className="text-xl font-semibold text-black">Download Our App</h1>
+    </div>
     <div className="flex items-center justify-between">
       <div className="mr-4 ">
         <img src="https://assets.api.uizard.io/api/cdn/stream/07d4696b-4d8a-41d4-b1d8-d76970325da7.png" alt="download" />
@@ -145,7 +147,7 @@ const LandingPage = () => {
           <div>
             <button
               type="download"
-              className="w-full bg-indigo-500 text-black px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+              className=" bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600" style={{ backgroundColor: 'black' }}
             >
               Download
             </button>
