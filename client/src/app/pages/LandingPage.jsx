@@ -21,28 +21,37 @@ const LandingPage = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative bg-gray-200 py-16 ">
 
-<div className="flex  items-center justify-center relative">
-  <div  >
-    <img src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png" alt="discover2" className="w-10 h-10 rounded-lg absolute top-0 left-0" />
-  </div>
+<div className="flex items-center">
 
-          <div className="text-center">
-            <h1 className="text-6xl font-semibold font-poppins text-black mb-4">Discover Our Most <br/> Delectable Dishes</h1>
-            <form onSubmit={handleSearchSubmit} className="flex items-center justify-center">
+  
+  <div className="relative" style={{ width: '192px', height: '192px' }}>
+    <img
+      src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png"
+      alt="discover2"
+      className="w-12 h-12 rounded-lg absolute top-0 left-10"
+    />
+  </div>
+  <div className="text-center flex-grow">
+    <header className="text-6xl font-semibold font-poppins text-black mb-4 text-center">
+      Discover Our Most <br /> Delectable Dishes
+    </header>
+  
+
+            <form onSubmit={handleSearchSubmit} className="mr-8 flex items-center justify-center">
               <input
                 type="text"
                 value={deliveryAddress}
                 onChange={handleSearchAddress}
-                className="border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-indigo-500 text-black text-center mr-2"
+                className="mr-8 border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-indigo-500 text-black text-center mr-2"
                 placeholder="Enter your address"
               />
-              <button type="submit" className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">
+              <button type="submit" className=" mr-8 font-semibold bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600" style={{ backgroundColor: 'black' }}>
                 Search
               </button>
             </form>
           </div>
-          <div>
-          <img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png" alt="discover1" className="w-10 h-10 rounded-lg absolute bottom-0 right-0" />
+          <div className="relative" style={{ top: '446px', left: '1111px', width: '176px', height: '176px' }}>
+          <img src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png " alt="discover1" className="w-12 h-12 rounded-lg absolute bottom-0 right-0 " />
         </div>
       </div>
         
@@ -157,7 +166,6 @@ const LandingPage = () => {
 </div>
 
        </div>
-
         
        
  
