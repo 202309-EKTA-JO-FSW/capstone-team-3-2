@@ -7,7 +7,7 @@ import LandingNavbar from '@/components/LandingNavbar'
 import Navbar from '@/components/Navbar'
 import LandingPage from '@/app/pages/LandingPage'
 import '../style.css';
-
+import Footer from "@/components/Footer";
 
 const font = Poppins({
   subsets: ['latin'],
@@ -15,16 +15,12 @@ const font = Poppins({
 })
 export default function Home() {
   return (
-    <main className="flex  flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+    <main className=" bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
 
-      <div >
-        
-
-
+      <div className="bg-white " >
         <LandingNavbar />
-        
         <LandingPage />
-        
+        <Footer/>
       </div>
     </main >
   );
