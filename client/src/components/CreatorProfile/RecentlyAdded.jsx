@@ -4,7 +4,7 @@ import React from 'react';
 const RecentlyAdded = () => {
   return (
     <div className="mt-8 mr-8">
-      <h1 className="text-2xl font-semibold mb-4 ml-4 text-black font-poppins" style={{ lineHeight: '1.875rem' , fontSize: '1.5rem'}}>Recently Added</h1>
+      <h1 className="text-2xl font-semibold mb-4 ml-4 text-black font-poppins" style={{ lineHeight: '1.875rem' , fontSize: '1.5rem', marginLeft: '25px'}}>Recently Added</h1>
       <div className="flex justify-between">
         <Favorite />
         <TopRated />
@@ -108,7 +108,7 @@ const Delicious = () => {
         </div>
         <div>
         <p>$10.99</p>
-          <p>30 mins</p>
+          <p>30mins</p>
         </div>
     </div>
     </div>
