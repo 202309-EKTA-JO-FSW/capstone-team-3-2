@@ -27,7 +27,7 @@ const getProfile = async (req, res) => {
 const getAllRestaurants = async (req, res) => {
     const { title, cuisine, area, rate, deliveryTime } = req.query;
     const query = {};
-    if (title) query.title = { $regex: new RegExp(title, "i") }; //$regex: Provides regular expression capabilities for pattern matching strings in queries. i: Case-insensitive
+    if (title) query.title = { $regex: new RegExp(title, "i") };
     if (area) query.area = { $regex: new RegExp(area, "i") };
     if (cuisine) query.cuisine = { $regex: new RegExp(cuisine, "i") };
     if (rate) query.rate = rate;
