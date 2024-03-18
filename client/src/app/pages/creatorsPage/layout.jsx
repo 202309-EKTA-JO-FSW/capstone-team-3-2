@@ -7,9 +7,9 @@ const creatorsLayout = ({
 }) => {
     return (
         <div className="">
-            <LandingNavbar/>
+            
             {children}
-            <Footer/>
+            
         </div>
     )
 }

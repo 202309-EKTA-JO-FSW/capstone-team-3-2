@@ -65,7 +65,7 @@ const LandingPage = () => {
         <div className="bg-gray-200 py-16   mb-8 relative">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-col   cursor-pointer" onClick={toggleSteps}>
     <div >
-      <h1 className=" text-centertext-2xl mb-4 mr-4 text-black  font-semibold font-poppins rounded-lg border border-yellow-500 shadow-lg " style={{ lineHeight: '48px' }}>How It Works</h1>
+      <h1 className=" text-center text-2xl mb-4 mr-4 text-black  font-semibold font-poppins rounded-lg border border-yellow-500 shadow-lg " style={{ lineHeight: '48px' }}>How It Works</h1>
     </div>
   </div>
   {showSteps && (
