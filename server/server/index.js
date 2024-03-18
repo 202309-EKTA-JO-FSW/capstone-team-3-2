@@ -1,6 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const userRoutes = require('./routes/userRoutes')
+const customerRoutes = require('./routes/customerRoutes');
+const adminRoutes = require('./routes/adminRoutes');
+const restaurantRoutes = require('./routes/restaurantRoutes');
+const riderRoutes = require('./routes/riderRoutes');
+
+
 
 require("dotenv").config();
 
@@ -28,5 +34,9 @@ app.get("/test", (req, res) => {
 });
 
 app.use('/api/users', userRoutes)
+app.use('/api/admin', adminRoutes);
+app.use('/api/customer', customerRoutes);
+app.use('/api/restaurant', restaurantRoutes);
+app.use('/api/rider', riderRoutes);
 
 module.exports = app;
