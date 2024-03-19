@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className=" bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
 
-      <div className="bg-white " >
+      <div className="bg-gray-200 " >
         <LandingNavbar />
         <LandingPage />
         <Footer/>

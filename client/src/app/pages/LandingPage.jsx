@@ -20,25 +20,23 @@ const LandingPage = () => {
 
   return (
     <div className="     ">
+      <div className="w-full">
+
+ 
+<img src="landingpage.png" alt="landing" className="justify-center  " style={{ width: '1150px', height: '450px' , marginLeft:'9rem'}} >
+</img>
 
 <div className="flex flex-col justify-center items-center ">
 
-<div className="flex">
-  <div className="relative mr-8" style={{ width: '150px', height: '150px', paddingTop: '2rem' }}>
-    <img
-      src="https://assets.api.uizard.io/api/cdn/stream/4c2ecf65-dcbe-4126-9aba-e90ab3514397.png"
-      alt="discover2"
-      className="w-12 h-12 rounded-lg absolute top-0 left-0"
-    />
-  </div>
-  <div className="flex-grow flex items-center justify-center">
-    <header className="font-semibold font-poppins text-black mb-4 text-center" style={{ paddingLeft: '20px' , fontSize: '3rem', paddingTop: '4rem', marginTop: '2rem' }}>
+
+
+
+<div>
+<div className="flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{backgroundImage: 'url(landingpage.png)'}}>
+    <header className="font-semibold font-poppins text-black mb-4 text-center" style={{  fontSize: '2rem', paddingTop: '4rem', marginTop: '2rem' }}>
       Discover Our Most <br /> Delectable Dishes
     </header>
-  </div>
-</div> 
-            <div className="flex items-center">
-  <div className="flex justify-center items-center" style={{ paddingLeft: '20px' , paddingTop: '4rem', marginTop: '2rem' }}>
+
     <form onSubmit={handleSearchSubmit} className="flex items-center justify-center">
       <input
         type="text"
@@ -52,15 +50,12 @@ const LandingPage = () => {
       </button>
     </form>
   </div>
-  <div className="relative ml-8" style={{ width: '150px', height: '150px' }}>
-    <img
-      src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png"
-      alt="discover1"
-      className="w-12 h-12 rounded-lg absolute bottom-0 right-0"
-    />
-  </div>
 </div>
-        
+
+
+
+</div>
+
 
         <div className="bg-gray-200 py-16   mb-8 relative">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-col   cursor-pointer" onClick={toggleSteps}>
@@ -145,36 +140,11 @@ const LandingPage = () => {
   </div>
 </div>
 
-<div className=" border border-yellow-500 shadow-lg mt-8">
-  <div className=" flex flex-col"> 
-    <div className="mb-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-col mt-8 space-y-2"> 
-      <h1 className="text-xl font-semibold text-black mt-8">Download Our App</h1>
-    </div>
-    <div className="flex items-center justify-between">
-      <div className="mr-4 ">
-        <img src="https://assets.api.uizard.io/api/cdn/stream/07d4696b-4d8a-41d4-b1d8-d76970325da7.png" alt="download" />
-      </div>
-      <div>
-        <h2 className="font-semibold">Order With Ease </h2>
-        <p>Indulge in the most delicious bites delivered to your door with FoodieHub. Our speedy delivery service offers a variety of cuisines from local restaurants</p>
-        <form className="w-full">
-          <div>
-            <a href="https://play.google.com/store/apps/details?id=com.restaurant.mob&hl=en_US&pli=1"  rel="noopener noreferrer">
-            <button
-              type="download" className=" bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600" style={{ backgroundColor: 'black' }}>Download
-            </button>
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+
 </div>
-</div>
-     
-     </div>   
-       
- 
+</div>   
+
+
   )};
 
 export default LandingPage;
