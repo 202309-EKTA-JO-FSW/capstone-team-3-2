@@ -1,11 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+/* styles.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 html,
 body,
 :root {
   height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 @layer base {
