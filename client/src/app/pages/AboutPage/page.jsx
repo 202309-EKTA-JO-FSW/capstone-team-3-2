@@ -61,27 +61,27 @@ const aboutPage = () => {
 
 <div className="flex flex-row justify-center items-center space-between space-x-[4rem] mt-[2rem]" >
 
-<div className="flex flex-col " style={{ marginRight: '2rem' }}>
+<div className="flex flex-col " style={{ marginRight: '2rem', marginBottom:'2rem' }}>
           <img className="rounded-full mb-8  " style={{width:"14rem", height:"14rem" , }}
 src="https://cdn-bnklg.nitrocdn.com/WQiharaAoSUWjdmYdQaoZKLXawgJIPOR/assets/images/source/rev-3e47137/www.upmenu.com/wp-content/uploads/2023/09/Marek-Truskolaski.png.webp" alt="person1"/>
           <h2 className="font-semibold text-center text-gray-700 text-lg">Marek Truskolaski</h2>
           <h2 className="font-bold text-center text-gray-700 text-lg">Co-founder</h2>
         </div>
 
-        <div className="flex flex-col" style={{ marginRight: '2rem' }}>
+        <div className="flex flex-col" style={{ marginRight: '2rem'  , marginBottom:'2rem'}}>
           <img className="rounded-full mb-8" style={{width:"14rem", height:"14rem"}}
 src="https://cdn-bnklg.nitrocdn.com/WQiharaAoSUWjdmYdQaoZKLXawgJIPOR/assets/images/source/rev-3e47137/www.upmenu.com/wp-content/uploads/2023/09/Damian-Urbaniec.png.webp" alt="person2"/>
           <h2 className="font-semibold text-center text-gray-700 text-lg">Damian Urbaniec</h2>
           <h2 className="font-bold text-center text-gray-700 text-lg">UX Designer</h2>
         </div>
 
-        <div className="flex flex-col" style={{ marginRight: '2rem' }}>
+        <div className="flex flex-col" style={{ marginRight: '2rem' , marginBottom:'2rem' }}>
           <img className="rounded-full mb-8" style={{width:"14rem", height:"14rem"}}
 src="https://cdn-bnklg.nitrocdn.com/WQiharaAoSUWjdmYdQaoZKLXawgJIPOR/assets/images/source/rev-3e47137/www.upmenu.com/wp-content/uploads/2023/09/Anna-Muras.png.webp" alt="person3"/>
           <h2 className="font-semibold text-center text-gray-700 text-lg">Anna Muras</h2>
           <h2 className="font-bold text-center text-gray-700 text-lg">Co-Founder</h2>
         </div>
-        <div className="flex flex-col" style={{ marginRight: '2rem' }}>
+        <div className="flex flex-col" style={{ marginRight: '2rem' , marginBottom:'2rem' }}>
           <img className="rounded-full mb-8" style={{width:"14rem", height:"14rem"}}
 src="https://cdn-bnklg.nitrocdn.com/WQiharaAoSUWjdmYdQaoZKLXawgJIPOR/assets/images/source/rev-3e47137/www.upmenu.com/wp-content/uploads/2023/09/Wojtek-Kazmierczak.png.webp" alt="person4"/>
           <h2 className="font-semibold text-center text-gray-700 text-lg">Bartek Konopka</h2>
