@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             
-            <Link href="/account" passHref>
-              <span className="mr-4 cursor-pointer">Account</span>
+            <Link href="/pages/AboutPage" passHref>
+              <span className="mr-4 cursor-pointer">About Us</span>
             </Link>
             
             <Link href="/contact" passHref>
