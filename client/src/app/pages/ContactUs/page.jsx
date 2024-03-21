@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import Footer from '@/components/Footer';
 import Hero from "@/components/Hero/Hero";
 import emailjs from 'emailjs-com';
+import LandingNavbar from '@/components/LandingNavbar';
 
 const ContactPage = () => {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -30,33 +31,35 @@ const ContactPage = () => {
         try {
            
             if (!emailRef.current.value || !messageRef.current.value) {
-                throw new Error('Email and message are required fields');
+                throw new Error('Email and message are required ');
             }
           
             await new Promise((resolve) => setTimeout(resolve, 1000));
 
-            setMessage("Your email was sent successfully");
+            setMessage("Your email was sent successfully" ) ;
             setMessageType('success');
 
             emailRef.current.value = '';
             subjectRef.current.value = '';
             messageRef.current.value = '';
-            
+
         } catch (error) {
             console.error("Failed to send the email:", error);
-            setMessage("Failed to send the email. Please try again.");
+            setMessage ("Failed to send the email. Please try again." ) ; 
             setMessageType('error');
         }
     };
 
     return (
         <div className="bg-gray-200">
+                    <LandingNavbar/>
+
             <div className="flex flex-col">
                 <div className="ml-4 text-black"> 
                     <Hero
                         imgUrl={"https://plus.unsplash.com/premium_photo-1661542867896-54694497f5cd?q=80&w=2854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
                         header={"Contact Us" } 
-                        subHeader={"DishDash"}
+                        subHeader={""}
                         paragraph={"We are here to help you 24/7, with top-notch support specialists"}
                         headerClassName="ml-10"
                         textColor={"text-black"}
