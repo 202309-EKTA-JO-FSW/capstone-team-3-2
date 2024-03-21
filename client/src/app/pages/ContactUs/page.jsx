@@ -28,21 +28,20 @@ const ContactPage = () => {
         e.preventDefault();
 
         try {
-            // Validation
+           
             if (!emailRef.current.value || !messageRef.current.value) {
                 throw new Error('Email and message are required fields');
             }
-
-            // Mock delay for demonstration
+          
             await new Promise((resolve) => setTimeout(resolve, 1000));
 
             setMessage("Your email was sent successfully");
             setMessageType('success');
 
-            // Clear form fields after successful submission
             emailRef.current.value = '';
             subjectRef.current.value = '';
             messageRef.current.value = '';
+            
         } catch (error) {
             console.error("Failed to send the email:", error);
             setMessage("Failed to send the email. Please try again.");
@@ -68,7 +67,7 @@ const ContactPage = () => {
                 <div className="w-full"> 
                     <form onSubmit={handleSubmit}>
                         <div className="flex flex-col justify-center">
-                            <div style={{padding: "2rem"}}><h2 className='font-bold ml-1'>Submit a request</h2></div>
+                            <div style={{padding: "2rem", marginLeft: 0}} ><h2 className='font-bold ' style={{marginLeft: 0}}>Submit a request</h2></div>
                             <div className="mb-4 relative">
                                 <input
                                     ref={subjectRef}
