@@ -1,15 +1,14 @@
 "use client"
 import React from 'react';
 import Footer from "@/components/Footer";
-import Navbar from '@/components/Navbar';
-
+import LandingNavbar from '@/components/LandingNavbar';
 
 
 const aboutPage = () => {
   return (
     
     <div className="" >
-
+<LandingNavbar/>
 <div className="flex  mt-4 ">
   <div className="flex space-x-4 w-full">
     
