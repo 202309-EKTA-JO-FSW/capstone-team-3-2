@@ -2,7 +2,6 @@
 import React, { useState, useRef } from 'react';
 import Footer from '@/components/Footer';
 import Hero from "@/components/Hero/Hero";
-import emailjs from 'emailjs-com';
 import LandingNavbar from '@/components/LandingNavbar';
 
 const ContactPage = () => {
