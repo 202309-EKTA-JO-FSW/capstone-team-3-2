@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="mr-4 cursor-pointer">About Us</span>
             </Link>
             
-            <Link href="/contact" passHref>
+            <Link href="/pages/ContactUs" passHref>
               <span className="mr-4 cursor-pointer">Contact Us</span>
             </Link>
            

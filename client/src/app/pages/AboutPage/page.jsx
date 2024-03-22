@@ -1,21 +1,20 @@
 "use client"
 import React from 'react';
 import Footer from "@/components/Footer";
-import Navbar from '@/components/Navbar';
-
+import LandingNavbar from '@/components/LandingNavbar';
 
 
 const aboutPage = () => {
   return (
     
     <div className="" >
-
+<LandingNavbar/>
 <div className="flex  mt-4 ">
   <div className="flex space-x-4 w-full">
     
-    <a href="#" className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">Home</a>
+    <a href="#" className="px-2 py-2 rounded-lg bg-gray-200 hover:bg-gray-300">Home</a>
     <span class="px-2 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 ">&gt;</span>
-    <p class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 w-full">About Us</p>
+    <p class="px-2 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 w-full" style={{color:"purple"}}>About Us</p>
   </div>
 </div>
 
