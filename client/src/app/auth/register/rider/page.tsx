@@ -1,0 +1,15 @@
+import Hero from "@/components/Hero/Hero";
+import { RegisterForm } from "@/components/auth/rider-register-form";
+
+const RegisterPage = () => {
+    return (
+        <div>
+
+            <Hero imgUrl={'/landingpage.png'} header={'Welcome to Our Website'} subHeader={'Riders!'} paragraph={'Sign up to access exclusive features.'} />
+
+            <RegisterForm mainHeader="Join Us Now! Rider" />
+        </div>
+    );
+};
+
+export default RegisterPage;
