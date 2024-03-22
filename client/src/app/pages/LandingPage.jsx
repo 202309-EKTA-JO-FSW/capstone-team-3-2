@@ -145,7 +145,7 @@ const LandingPage = () => {
                     DishDash helps restaurants thrive with online ordering,
                     loyalty programs, and more
                   </CardText>
-                  <Link href="/pages/restaurant/signup">
+                  <Link href="/auth/register/restaurant">
                     <Button color="dark">Join Now</Button>
                   </Link>
                 </CardBody>
@@ -168,7 +168,7 @@ const LandingPage = () => {
                     Earn money by delivering food from restaurants. All you need
                     is a bike and a passion for great service
                   </CardText>
-                  <Link href="/pages/rider/signup">
+                  <Link href="/auth/register/rider">
                     <Button color="dark">Start Riding</Button>
                   </Link>
                 </CardBody>

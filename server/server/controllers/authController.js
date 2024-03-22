@@ -31,7 +31,8 @@ const login = async (req, res, next) => {
         }
         return res.status(401).json({ message: 'Incorrect email or password' });
     } catch (error) {
-        next(error);
+        res.status(500).json({ message: error.message });
+
     }
 };
 
@@ -45,7 +46,8 @@ const registerAdmin = async (req, res, next) => {
         await user.save();
         res.json({ message: 'Registration successful' });
     } catch (error) {
-        next(error);
+        res.status(500).json({ message: error.message });
+
     }
 };
 
@@ -60,7 +62,8 @@ const registerCustomer = async (req, res, next) => {
         await user.save();
         res.json({ message: 'Registration successful' });
     } catch (error) {
-        next(error);
+        res.status(500).json({ message: error.message });
+
     }
 };
 
@@ -74,7 +77,8 @@ const registerRestaurant = async (req, res, next) => {
         await user.save();
         res.json({ message: 'Registration successful' });
     } catch (error) {
-        next(error);
+        res.status(500).json({ message: error.message });
+
     }
 };
 
@@ -88,7 +92,8 @@ const registerRider = async (req, res, next) => {
         await user.save();
         res.json({ message: 'Registration successful' });
     } catch (error) {
-        next(error);
+        res.status(500).json({ message: error.message });
+
     }
 };
 

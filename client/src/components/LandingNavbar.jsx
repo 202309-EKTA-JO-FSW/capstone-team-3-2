@@ -17,7 +17,7 @@ const LandingNavbar = () => {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/auth/register/" color="dark">
+          <NavLink href="/auth/register/customer" color="dark">
             <Button outline>Sign up</Button>
           </NavLink>
         </NavItem>
