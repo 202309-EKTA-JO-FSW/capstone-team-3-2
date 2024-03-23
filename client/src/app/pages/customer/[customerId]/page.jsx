@@ -11,7 +11,7 @@ function Page({signOut }) {
 
 const params = useParams();
   const fileInputRef = useRef(null);
-  const restaurantId = params.restaurantId;
+  const customerId = params.customerId;
   const [edit, setEdit] = useState(false);
   const [imageSrc, setImageSrc] = useState(null);
   const [updatedCustomer, setUpdatedCustomer] = useState({
@@ -34,10 +34,10 @@ const params = useParams();
         };
         
         console.log(token)
-        const response = await fetch(`https://capstone-team-3-2.onrender.com/api/customer/profile/${restaurantId}`, {
+        const response = await fetch(`https://capstone-team-3-2.onrender.com/api/customer/profile/${customerId}`, {
           headers: headers,
         });
-        console.log(restaurantId);
+        console.log(customerId);
         if (response.ok) {
           const data = await response.json();
           setUpdatedCustomer({
@@ -54,7 +54,7 @@ const params = useParams();
     };
 
     fetchData();
-  }, [restaurantId]);
+  }, [customerId]);
 
   const handleEdit = () => {
     setEdit(!edit);
