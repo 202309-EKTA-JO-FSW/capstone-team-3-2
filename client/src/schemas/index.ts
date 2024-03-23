@@ -41,6 +41,23 @@ export const RegisterSchema = z.object({
   phone: z.string().refine((val) => /^\d{9}$/.test(val), {
     message: "Phone number must be 9 digits",
   }),
+  
+  street: z.string().min(1, "Street is required"),
+  
+  buildingNo: z
+    .string()
+    // .positive("Building number must be positive")
+    .min(1, "Building number is required"),
+    
+    balance:z.number()
+    .positive("Building number must be positive")
+    .min(1, "Building number is required"),
+    
+    location: z
+    .string()
+    .min(2, { message: "Location should have at least 2 numbers" }),
+
+  
 });
 
 export const RiderRegisterSchema = z.object({
