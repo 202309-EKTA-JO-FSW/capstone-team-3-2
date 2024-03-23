@@ -1,37 +1,37 @@
-'use client'
+"use client";
 
-import * as z from 'zod'
-import { useState, useTransition } from 'react'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { RiderRegisterSchema } from '@/schemas'
-import { CardWrapper } from "./card-wrapper"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { FormError } from '@/components/form-error'
-import { FormSuccess } from '@/components/form-success'
-import axios from 'axios';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
+import * as z from "zod";
+import { useState, useTransition } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { RiderRegisterSchema } from "@/schemas";
+import { CardWrapper } from "./card-wrapper";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { FormError } from "@/components/form-error";
+import { FormSuccess } from "@/components/form-success";
+import axios from "axios";
 
 export const RegisterForm = ({ mainHeader }) => {
-    const [error, setError] = useState('')
-    const [success, setSuccess] = useState('')
-    const [isPending, startTransition] = useTransition()
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+    const [isPending, startTransition] = useTransition();
 
     const form = useForm<z.infer<typeof RiderRegisterSchema>>({
         resolver: zodResolver(RiderRegisterSchema),
@@ -45,29 +45,34 @@ export const RegisterForm = ({ mainHeader }) => {
             license: "",
             nationalityId: "",
             location: '',
-            vehicleNo: ""
-        }
-    })
+            vehicleNo: "",
+            image: "",
+        },
+    });
 
     const onSubmit = async (values: z.infer<typeof RiderRegisterSchema>) => {
-        setSuccess('');
-        setError('');
+        setSuccess("");
+        setError("");
         console.log(values);
 
         startTransition(async () => {
             try {
-                const response = await axios.post('http://localhost:3001/api/users/rider/register/', {
-                    firstName: values.firstName,
-                    lastName: values.lastName,
-                    email: values.email,
-                    password: values.password,
-                    phone: values.phone,
-                    status: values.status,
-                    license: values.license,
-                    nationalityId: values.nationalityId,
-                    location: [40.7128, -74.0060],
-                    vehicleNo: values.vehicleNo
-                });
+                const response = await axios.post(
+                    "https://capstone-team-3-2.onrender.com/api/users/rider/register/",
+                    {
+                        firstName: values.firstName,
+                        lastName: values.lastName,
+                        email: values.email,
+                        password: values.password,
+                        phone: values.phone,
+                        status: values.status,
+                        license: values.license,
+                        nationalityId: values.nationalityId,
+                        location: [40.7128, -74.0060],
+                        vehicleNo: values.vehicleNo,
+                        Image: values.image,
+                    }
+                );
 
                 setSuccess(response.data.message);
                 console.log(response.data.message);
@@ -81,15 +86,15 @@ export const RegisterForm = ({ mainHeader }) => {
                     license: '',
                     nationalityId: '',
                     location: '',
-                    vehicleNo: ''
+                    vehicleNo: '',
+                    image: '',
                 });
             } catch (error) {
-                console.error('Error:', error.response.data.message);
+                console.error("Error:", error.response.data.message);
                 setError(error.response.data.message);
             }
         });
     };
-
 
     return (
         <div>
@@ -338,7 +343,26 @@ export const RegisterForm = ({ mainHeader }) => {
                                 )}
                             />
 
-
+                            <FormField
+                                control={form.control}
+                                name="image"
+                                render={({ field }) => {
+                                    return (
+                                        <FormItem>
+                                            <FormLabel>Profile Image</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    disabled={isPending}
+                                                    id="picture"
+                                                    type="file"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    );
+                                }}
+                            />
                         </div>
                         <FormError message={error} />
                         <FormSuccess message={success} />
@@ -353,7 +377,5 @@ export const RegisterForm = ({ mainHeader }) => {
 
             </CardWrapper>
         </div>
-
-    )
-
-}
+    );
+};

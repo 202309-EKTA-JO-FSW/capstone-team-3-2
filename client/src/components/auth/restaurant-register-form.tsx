@@ -20,8 +20,6 @@ import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import axios from "axios";
 
-
-
 export const RegisterForm = ({ mainHeader }) => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
@@ -30,19 +28,19 @@ export const RegisterForm = ({ mainHeader }) => {
     const form = useForm<z.infer<typeof RestaurantRegisterSchema>>({
         resolver: zodResolver(RestaurantRegisterSchema),
         defaultValues: {
-            title: '',
-            email: '',
-            password: '',
-            phone: '',
-            image: '',
-            license: '',
-            street: '',
-            area: '',
-            cuisine: '',
-            buildingNo: '',
-            rate: '',
-            deliveryTime: '',
-            deliveryFee: '',
+            title: "",
+            email: "",
+            password: "",
+            phone: "",
+            image: "",
+            license: "",
+            street: "",
+            area: "",
+            cuisine: "",
+            buildingNo: "",
+            rate: "",
+            deliveryTime: "",
+            deliveryFee: "",
         },
     });
 
@@ -50,7 +48,6 @@ export const RegisterForm = ({ mainHeader }) => {
         setSuccess("");
         setError("");
         console.log(values);
-
 
         startTransition(async () => {
             try {
@@ -76,19 +73,19 @@ export const RegisterForm = ({ mainHeader }) => {
                 setSuccess(response.data.message);
                 console.log(response.data.message);
                 form.reset({
-                    title: '',
-                    email: '',
-                    password: '',
-                    phone: '',
-                    image: '',
-                    license: '',
-                    street: '',
-                    buildingNo: '',
-                    area: '',
-                    cuisine: '',
-                    rate: '',
-                    deliveryTime: '',
-                    deliveryFee: '',
+                    title: "",
+                    email: "",
+                    password: "",
+                    phone: "",
+                    image: "",
+                    license: "",
+                    street: "",
+                    buildingNo: "",
+                    area: "",
+                    cuisine: "",
+                    rate: "",
+                    deliveryTime: "",
+                    deliveryFee: "",
                 });
             } catch (error) {
                 console.error("Error:", error.response.data.message);
@@ -129,7 +126,6 @@ export const RegisterForm = ({ mainHeader }) => {
                                     );
                                 }}
                             />
-
 
                             <FormField
                                 control={form.control}
@@ -232,7 +228,6 @@ export const RegisterForm = ({ mainHeader }) => {
                                 }}
                             />
 
-
                             <FormField
                                 control={form.control}
                                 name="buildingNo"
@@ -247,7 +242,6 @@ export const RegisterForm = ({ mainHeader }) => {
                                                     placeholder="123"
                                                     type="number"
                                                     min={0}
-
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -311,7 +305,6 @@ export const RegisterForm = ({ mainHeader }) => {
                                                     placeholder="Delivery time in minutes"
                                                     type="number"
                                                     min={1}
-
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -333,7 +326,6 @@ export const RegisterForm = ({ mainHeader }) => {
                                                     placeholder="in JOD"
                                                     type="number"
                                                     min={0}
-
                                                 />
                                             </FormControl>
                                             <FormMessage />
@@ -371,12 +363,13 @@ export const RegisterForm = ({ mainHeader }) => {
                                 render={({ field }) => {
                                     return (
                                         <FormItem>
-                                            <FormLabel>Delivery Fee</FormLabel>
+                                            <FormLabel>Profile Image</FormLabel>
                                             <FormControl>
                                                 <Input
                                                     {...field}
                                                     disabled={isPending}
-                                                    id="picture" type="file"
+                                                    id="picture"
+                                                    type="file"
                                                 />
                                             </FormControl>
                                             <FormMessage />
