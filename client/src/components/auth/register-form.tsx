@@ -32,7 +32,12 @@ export const RegisterForm = ({ mainHeader }) => {
             lastName: '',
             email: "",
             password: "",
-            phoneNumber: '',
+            phone: '',
+            street: '',
+            buildingNo: '',
+            location: '',
+            balance: 0
+
         }
 
     })
@@ -43,23 +48,31 @@ export const RegisterForm = ({ mainHeader }) => {
 
         startTransition(async () => {
             try {
-                const response = await axios.post('http://localhost:3001/api/users/register/', {
+                const response = await axios.post("https://capstone-team-3-2.onrender.com/api/users/customer/register/", {
                     firstName: values.firstName,
                     lastName: values.lastName,
                     email: values.email,
                     password: values.password,
-                    phoneNumber: values.phoneNumber,
+                    phone: values.phone,
+                    street: values.street,
+                    buildingNo: values.buildingNo,
+                    location: [40.7128, -74.0060],
+                    balance: 100
+
                 });
 
                 setSuccess(response.data.message);
                 console.log(response.data.message);
-                // form.reset({
-                //     firstName: '',
-                //     lastName: '',
-                //     email: '',
-                //     password: '',
-                //     phoneNumber: '',
-                // });
+                form.reset({
+                    firstName: '',
+                    lastName: '',
+                    email: "",
+                    password: "",
+                    phone: '',
+                    street: '',
+                    buildingNo: '',
+                    location: ''
+                });
             } catch (error) {
                 console.error('Error:', error.response.data.message);
                 setError(error.response.data.message);
@@ -174,7 +187,7 @@ export const RegisterForm = ({ mainHeader }) => {
                             />
                             <FormField
                                 control={form.control}
-                                name='phoneNumber'
+                                name='phone'
                                 render={({ field }) => {
                                     return (
                                         <FormItem>
@@ -194,6 +207,74 @@ export const RegisterForm = ({ mainHeader }) => {
                                     )
                                 }}
                             />
+                            <FormField
+                                control={form.control}
+                                name='location'
+                                render={({ field }) => {
+                                    return (
+                                        <FormItem>
+                                            <FormLabel>
+                                                location
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    disabled={isPending}
+                                                    placeholder='Location'
+                                                    type='text'
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )
+                                }}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="street"
+                                render={({ field }) => {
+                                    return (
+                                        <FormItem>
+                                            <FormLabel>Street Name</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    disabled={isPending}
+                                                    placeholder="St. Name - City - Country"
+                                                    type="text"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    );
+                                }}
+                            />
+
+
+                            <FormField
+                                control={form.control}
+                                name="buildingNo"
+                                render={({ field }) => {
+                                    return (
+                                        <FormItem>
+                                            <FormLabel>Building Number</FormLabel>
+                                            <FormControl>
+                                                <Input
+                                                    {...field}
+                                                    disabled={isPending}
+                                                    placeholder="123"
+                                                    type="number"
+                                                    min={0}
+
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    );
+                                }}
+                            />
+
+
                         </div>
                         <FormError message={error} />
                         <FormSuccess message={success} />

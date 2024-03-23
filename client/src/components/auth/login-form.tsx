@@ -40,7 +40,7 @@ export const LoginForm = ({ mainHeader }) => {
         setIsPending(true);
 
         try {
-            const response = await axios.post('http://localhost:3001/api/users/login/', {
+            const response = await axios.post('https://capstone-team-3-2.onrender.com/api/users/login/', {
                 email: values.email,
                 password: values.password,
             });
@@ -59,7 +59,7 @@ export const LoginForm = ({ mainHeader }) => {
             mainHeader={mainHeader}
             headerLabel="Welcome back"
             backButtonLabel="Don't have account? YET"
-            backButtonHref="/auth/register"
+            backButtonHref="/auth/register/customer"
             showSocial
         >
             <Form {...form}>

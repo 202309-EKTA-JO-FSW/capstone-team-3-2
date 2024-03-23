@@ -55,7 +55,7 @@ export const RegisterForm = ({ mainHeader }) => {
         startTransition(async () => {
             try {
                 const response = await axios.post(
-                    "http://localhost:3001/api/users/restaurant/register/",
+                    "https://capstone-team-3-2.onrender.com/api/users/restaurant/register/",
                     {
                         title: values.title,
                         email: values.email,

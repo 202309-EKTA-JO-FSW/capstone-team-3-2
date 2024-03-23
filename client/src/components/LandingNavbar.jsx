@@ -5,10 +5,10 @@ const LandingNavbar = () => {
   return (
     <Navbar color="dark" dark expand="lg">
       <NavbarBrand href="/">
-        {/* <img src="/images/logo.png" alt="DishDash Logo - Dishes Website" /> */}
-        <span className="font-semibold font-poppins text-white mr-4 neon-text text-2xl leading-14 ">
+        <img src="/dishdashlogo.png" alt="DishDash Logo - Dishes Website"  width={'80px'}/>
+        {/* <span className="font-semibold font-poppins text-white mr-4 neon-text text-2xl leading-14 ">
           DishDash
-        </span>
+        </span> */}
       </NavbarBrand>
       <Nav className="flex content-between">
         <NavItem>
