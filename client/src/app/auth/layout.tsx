@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer"
 import LandingNavbar from "@/components/LandingNavbar"
 import { Container, Col, Row } from "reactstrap"
+//import AuthLayout from "../auth/layout.tsx";
 
 const AuthLayout = ({
     children
@@ -8,18 +9,31 @@ const AuthLayout = ({
     children: React.ReactNode
 }) => {
     return (
-        <main>
-            <div className=" bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+        <main style={{ 
+            display: "flex", 
+            flexDirection: "column", 
+            minHeight: "100vh" 
+        }}>
+            <div  style={{ 
+            flex: "1", 
+            backgroundImage: "url(/login.png)", 
+            backgroundSize: "cover", 
+            paddingBottom: "6rem", 
+            minHeight: "calc(100vh - 6rem)" 
+        }}>
+
                 <Col >
-                    <Row>
+                
+                    <Row >
+                        
                         {children}
 
                     </Row>
-                    <Row>
-                        <Footer />
-                    </Row>
+                    
                 </Col>
+
             </div>
+            <Footer />
 
         </main >
     )

@@ -5,7 +5,7 @@ const RegisterPage = () => {
     return (
         <div>
 
-            <Hero imgUrl={'/landingpage.png'} header={'Welcome to Our Website'} subHeader={'Riders!'} paragraph={'Sign up to access exclusive features.'} />
+            <Hero imgUrl={'/joinusrestaurant.png'} header={'Welcome to Our Website'} subHeader={'DishDash'} paragraph={'Sign up to access exclusive features.'} />
 
             <RegisterForm mainHeader="Join Us Restaurant" />
         </div>

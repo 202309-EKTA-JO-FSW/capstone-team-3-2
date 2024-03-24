@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="mr-4 cursor-pointer">Contact Us</span>
             </Link>
            
-            <Link href="/join" passHref>
+            <Link href="/auth/register/restaurant" passHref>
               <span className="cursor-pointer">Join Us</span>
             </Link>
           </div>

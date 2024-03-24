@@ -52,7 +52,7 @@ const LandingPage = () => {
             </Col>
             <Col md={2}>
               <img
-                src="https://assets.api.uizard.io/api/cdn/stream/509960c0-9679-42c2-9fe2-0e3a3ed5e54f.png"
+                src="https://plus.unsplash.com/premium_photo-1681487852901-3decdb9c698b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="discover1"
               />
             </Col>
@@ -72,7 +72,7 @@ const LandingPage = () => {
                 <Col md={4}>
                   <Card className="shadow-lg text-center" style={{minHeight:'100%'}}>
                     <img
-                      src="https://assets.api.uizard.io/api/cdn/stream/7dc79fea-dfab-43c4-8c3c-4d3c302573fb.png"
+                      src="https://i.insider.com/5d147dd2e3ecba0d28105853?width=700"
                       alt="step1"
                     />
                     <CardBody>
@@ -89,7 +89,7 @@ const LandingPage = () => {
                 <Col md={4}>
                   <Card className="shadow-lg text-center " style={{minHeight:'100%'}}>
                     <img
-                      src="https://assets.api.uizard.io/api/cdn/stream/a46630bd-9a0c-4b7c-bb3c-6b0f4f2d3b31.png"
+                      src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="step 2"
                     />
                     <CardBody>
@@ -106,7 +106,7 @@ const LandingPage = () => {
                 <Col md={4}>
                   <Card className="shadow-lg text-center" style={{minHeight:'100%'}}>
                     <img
-                      src="https://assets.api.uizard.io/api/cdn/stream/6992293c-39ad-4d51-873e-64bf26754ab0.png"
+                      src="https://images.unsplash.com/photo-1599050751795-6cdaafbc2319?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="step 3"
                     />
                     <CardBody>
@@ -135,8 +135,8 @@ const LandingPage = () => {
                 style={{ minHeight: "100%" }}
               >
                 <img
-                  alt="become a rider"
-                  src="https://assets.api.uizard.io/api/cdn/stream/3de66382-a1d7-41e9-add0-73355e305e95.png"
+                  alt="join us"
+                  src="https://plus.unsplash.com/premium_photo-1664201890375-f8fa405cdb7d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
                 <CardBody>
                   <CardTitle tag="h5">Join us</CardTitle>
@@ -158,7 +158,7 @@ const LandingPage = () => {
                 style={{ minHeight: "100%" }}
               >
                 <img
-                  src="https://assets.api.uizard.io/api/cdn/stream/e246370c-8563-4926-bbe9-d1d44b872ab7.png"
+                  src="https://plus.unsplash.com/premium_photo-1683147652618-c4c917ac2920?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="become a rider"
                 />
                 <CardBody>
