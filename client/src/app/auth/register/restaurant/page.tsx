@@ -3,7 +3,8 @@ import { RegisterForm } from "@/components/auth/restaurant-register-form";
 
 const RegisterPage = () => {
     return (
-        <div>
+        
+<div style={{ backgroundColor:"#e0dcd1"}}>
 
             <Hero imgUrl={'/joinusrestaurant.png'} header={'Welcome to Our Website'} subHeader={'DishDash'} paragraph={'Sign up to access exclusive features.'} />
 
