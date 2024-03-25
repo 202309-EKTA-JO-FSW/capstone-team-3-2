@@ -44,9 +44,21 @@ export const LoginForm = ({ mainHeader }) => {
                 email: values.email,
                 password: values.password,
             });
+
             setSuccess(response.data.message);
             localStorage.setItem('token', response.data.token);
-            router.push('/pages/test');
+            const Id = response.data.user._id
+
+            localStorage.setItem('Id', response.data.user._id)
+
+            if (response.data.user.role === 'customer') {
+                router.push(`/pages/customer`);
+
+            } else if (response.data.user.role === 'restaurant') {
+                router.push(`/pages/restaurant`);
+
+            }
+
         } catch (error) {
             setError(error.response.data.message);
         } finally {
