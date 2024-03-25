@@ -52,7 +52,7 @@ export const LoginForm = ({ mainHeader }) => {
             localStorage.setItem('Id', response.data.user._id)
 
             if (response.data.user.role === 'customer') {
-                router.push(`/pages/customer/${Id}`);
+                router.push(`/pages/customer`);
 
             } else if (response.data.user.role === 'restaurant') {
                 router.push(`/pages/restaurant`);

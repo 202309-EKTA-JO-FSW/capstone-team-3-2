@@ -41,10 +41,10 @@ function MyNavbar(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">About Us</NavLink>
+              <NavLink href="/pages/AboutPage">About Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink href="/pages/ContactUs">
                 Contact Us
               </NavLink>
             </NavItem>
