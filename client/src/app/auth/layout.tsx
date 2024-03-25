@@ -8,18 +8,22 @@ const AuthLayout = ({
     children: React.ReactNode
 }) => {
     return (
-        <main>
-            <div className=" bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+        <main >
+            <div  
+          >
+
                 <Col >
-                    <Row>
+                
+                    <Row >
+                        
                         {children}
 
                     </Row>
-                    <Row>
-                        <Footer />
-                    </Row>
+                    
                 </Col>
+
             </div>
+            <Footer />
 
         </main >
     )

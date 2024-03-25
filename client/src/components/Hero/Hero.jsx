@@ -18,7 +18,7 @@ const HeroSection = ({header,subHeader,imgUrl,paragraph}) => {
         <Row  className=" justify-center ">
           <Col >
             <h2 className="display-6 " >
-               {header} <span style={{ color: "#d19c2a" }}>{subHeader}</span> 
+               {header} <span style={{ color: "#5c724a" }}>{subHeader}</span> 
             </h2>
             <p className="lead "> {paragraph}</p>
           </Col>
