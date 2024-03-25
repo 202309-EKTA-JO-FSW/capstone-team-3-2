@@ -1,8 +1,12 @@
 "use client"
 import { useState, useEffect, useMemo } from 'react';
 import styles from "../../../styles.module.css";
+import MyNavbar from '@/components/MyNavbar';
+import { useParams } from 'react-router-dom';
+
 
 function SpecificPage() {
+  const { id } = useParams();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -10,6 +14,7 @@ function SpecificPage() {
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
   const [subtotal, setSubtotal] = useState(0); 
+  console.log("Customer ID:", id);
 
   const dishesData = [
     {
@@ -167,6 +172,7 @@ function SpecificPage() {
 
 
   return (
+    
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.logo}>

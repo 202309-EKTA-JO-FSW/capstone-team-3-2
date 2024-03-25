@@ -12,7 +12,8 @@ const withAuth = (WrappedComponent) => {
             const isAuthenticated = () => {
                 if (typeof window !== 'undefined') {
                     let token = localStorage.getItem('token');
-                    console.log(token);
+                    let Id = localStorage.getItem('Id')
+
 
                     return token !== null;
                 }
