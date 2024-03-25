@@ -49,11 +49,13 @@ export const LoginForm = ({ mainHeader }) => {
             localStorage.setItem('token', response.data.token);
             const Id = response.data.user._id
 
+            localStorage.setItem('Id', response.data.user._id)
+
             if (response.data.user.role === 'customer') {
                 router.push(`/pages/customer/${Id}`);
 
             } else if (response.data.user.role === 'restaurant') {
-                router.push(`/pages/restaurant/${Id}`);
+                router.push(`/pages/restaurant`);
 
             }
 
