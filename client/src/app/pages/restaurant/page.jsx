@@ -179,10 +179,7 @@ function SpecificPage() {
           <h1>DISCOVER</h1> 
           <h1>DELICIOUS</h1>
         </div>
-        <div className={styles.buttonContainer}>
-          <button className={styles.button}>Log In</button>
-          <button className={styles.button}>Sign Up</button>
-        </div>
+        
       </div>
       <img src='https://img.freepik.com/premium-photo/tiramisu-stone-rustic-pub-wide-panoramic-generative-ai_918839-10384.jpg?w=1380' className={styles.pic}  />
       <div className={styles.middle}>

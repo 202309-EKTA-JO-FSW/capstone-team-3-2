@@ -6,11 +6,10 @@ import LandingNavbar from "@/components/LandingNavbar";
 
 const RegisterPage = () => {
     return (
-        <div  style={{ backgroundImage: "url(/login.png)", backgroundSize: "cover", minHeight: "100vh"  }}>
+        <div style={{ backgroundImage: "url(/login.png)", backgroundSize: "cover", minHeight: "100vh" }}>
 
 
-            {/*<Hero imgUrl={'/login.png'} header={'Welcome To Our Website'} subHeader={':)'} paragraph={'Sign up to have the best dishes.'} />*/}
-            {/* TODO: RegisterForm */}
+
             <RegisterForm mainHeader="Sign Up 🔐" />
         </div>
     );
