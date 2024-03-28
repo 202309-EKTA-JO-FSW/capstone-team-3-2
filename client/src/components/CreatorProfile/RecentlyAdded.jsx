@@ -1,4 +1,3 @@
-import { Span } from 'next/dist/trace';
 import React from 'react';
 
 const RecentlyAdded = () => {

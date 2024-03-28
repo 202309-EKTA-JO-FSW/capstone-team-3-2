@@ -20,7 +20,11 @@ import { FormError } from "@/components/form-error";
 import { FormSuccess } from "@/components/form-success";
 import axios from "axios";
 
-export const RegisterForm = ({ mainHeader }) => {
+interface RegisterFormProps {
+    mainHeader: string,
+}
+
+export const RegisterForm = ({ mainHeader }: RegisterFormProps) => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [isPending, startTransition] = useTransition();
@@ -87,9 +91,8 @@ export const RegisterForm = ({ mainHeader }) => {
                     deliveryTime: "",
                     deliveryFee: "",
                 });
-            } catch (error) {
-                console.error("Error:", error.response.data.message);
-                setError(error.response.data.message);
+            } catch (error: any) {
+                setError(error.response?.data?.message || 'An error occurred');
             }
         });
     };

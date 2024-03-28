@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "docker-compose up",
-    "build": "docker-compose up --build",
+    "build": "next build",
     "prune": "docker-compose down -v",
     "stop": "docker-compose down",
     "lint": "next lint"
@@ -39,10 +39,22 @@
     "@types/react": "18.2.65",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.0.3",
+    "eslint-plugin-next": "^0.0.0",
+    "lint-staged": "^15.2.0",
     "postcss": "^8",
+    "prettier": "^3.1.0",
     "tailwindcss": "^3.3.0",
     "typescript": "5.4.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }

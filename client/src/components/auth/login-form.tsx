@@ -20,7 +20,11 @@ import { FormSuccess } from '@/components/form-success';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
-export const LoginForm = ({ mainHeader }) => {
+
+interface LoginFormProps {
+    mainHeader: string,
+}
+export const LoginForm = ({ mainHeader }: LoginFormProps) => {
     const router = useRouter();
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -51,16 +55,19 @@ export const LoginForm = ({ mainHeader }) => {
 
             localStorage.setItem('Id', response.data.user._id)
 
-            if (response.data.user.role === 'customer') {
-                router.push(`/pages/customer`);
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('token', response.data.token);
+                const Id = response.data.user._id;
+                localStorage.setItem('Id', response.data.user._id);
 
-            } else if (response.data.user.role === 'restaurant') {
-                router.push(`/pages/restaurant`);
-
+                if (response.data.user.role === 'customer') {
+                    router.push(`/pages/customer`);
+                } else if (response.data.user.role === 'restaurant') {
+                    router.push(`/pages/restaurant`);
+                }
             }
-
-        } catch (error) {
-            setError(error.response.data.message);
+        } catch (error: any) {
+            setError(error.response?.data?.message || 'An error occurred');
         } finally {
             setIsPending(false);
         }

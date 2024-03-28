@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import axios from "axios";
-import style from "../../../../creator.module.css";
 import Stars from './components/Stars'
 import { Container,Col, Row,Form,FormGroup,Label,Input ,Button} from "reactstrap";
 import EditableRestaurantProfile from './components/EditableRestaurantProfile'

@@ -2,7 +2,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from "next/navigation";
-import withAuth from '@/components/withAuth';
 import EditableCustomerProfile from './components/EditableCustomerProfile'
 
 function Page() {
@@ -65,4 +64,4 @@ const params = useParams();
     );
 };
 
-export default withAuth (Page);
+export default Page

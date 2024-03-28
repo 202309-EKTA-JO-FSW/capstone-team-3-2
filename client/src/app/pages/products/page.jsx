@@ -1,6 +1,5 @@
 "use client";
 import { useState } from 'react';
-import withAuth from '@/components/withAuth';
 
 const dishesData = [
   {
@@ -147,4 +146,4 @@ const Products = () => {
   );
 };
 
-export default withAuth(Products);
+export default Products;
